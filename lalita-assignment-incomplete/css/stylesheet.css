@@ -1,0 +1,10 @@
+*{ outline: none !important; }
+button, .btn{background: #0e1f2f !important; color:#fff !important; border: 1px solid #0e1f2f !important;}
+button:hover, button:active,button:focus, .btn:active,  .btn:hover, .btn:focus{background:#fff !important; color:#0e1f2f !important;}
+.navbar-default  li.active a{color:#0e1f2f !important;  background: #fff !important;}
+.navbar-default { background: #0e1f2f; border-color: #0e1f2f; border-radius: 0 !important;}
+.navbar-default a{ color: #fff !important;}
+.thumbnail { background: url(../images/bg.jpg); color: #fff; border: 1px solid #fff; padding: 15px 5px;}
+.card-top { border-bottom: 1px solid rgba(255,255,255,0.5); padding-bottom: 5px; margin-bottom: 9px;}
+.thumbnail, .formWrapper { margin: 15px 0 10px;}
+.formWrapper { padding-bottom: 30px;}

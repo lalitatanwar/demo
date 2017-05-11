@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<title>Angular assignment</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <base href="/">
+</head>
+<body  ng-controller="myCtrl">
+<header>
+  <nav class="navbar navbar-default">
+   <div class="container"> 
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+    <div class="menuWrap navbar-right">
+      <ul class="nav navbar-nav">
+       <li class="active"><a href="/" title="home">Home</a></li>
+        <li><a href="/aboutUs" title="about us">About us</a></li>
+        <li><a href="/services" title="Services">Services</a></li>
+        <li><a href="/contactUs" title="Services">Contact Us</a></li>
+      </ul>
+    </div>
+   </div>	
+  </nav>
+</header>
+<section class="main-warp">
+  <div class="container">
+  <a href="/cardsForm" title="cardsForm" class="btn"> Add new records </a>
+  <div ng-view> </div>
+    <div class="row">
+    	<div class="col-sm-4" ng-repeat="data in dataObj">
+    	 <div class="thumbnail clearfix"> 
+    	   <div class="card-top clearfix">
+    	     <div class="col-sm-6">
+    	     	<a href="javascript:void(0)" class="remove-class" ng-click="objclick()">
+                  <span class="glyphicon glyphicon-remove"></span>
+                </a>
+    	     </div>
+    	     <div class="col-sm-6 text-right">
+    	       <a href="#" class="edit-class">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                </a>
+    	     </div>
+    	   </div>
+    	   <div class="card-bottom">
+    	    <div class="row">
+              <div class="col-md-12">
+               <div class="col-md-4"> SI.NO </div>
+               <div class="col-md-8"> {{$index + 1}} </div>
+              </div>
+    	    </div>
+    	    <!-- 2 -->
+    	    <div class="row">
+              <div class="col-md-12">
+               <div class="col-md-4">Name </div>
+               <div class="col-md-8"> {{data.name}} </div>
+              </div>
+    	    </div>
+    	    <!-- 4 -->
+    	    <div class="row">
+              <div class="col-md-12">
+               <div class="col-md-4"> Email </div>
+               <div class="col-md-8"> {{data.email}} </div>
+              </div>
+    	    </div>
+    	    <!-- 5 -->
+    	    <div class="row">
+              <div class="col-md-12">
+               <div class="col-md-4"> Phone</div>
+               <div class="col-md-8"> {{data.phone}} </div>
+              </div>
+    	    </div>
+    	    <!-- 6 -->
+    	    <div class="row">
+              <div class="col-md-12">
+               <div class="col-md-4"> Address </div>
+               <div class="col-md-8"> {{data.address}} </div>
+              </div>
+    	    </div>
+    	    <!-- end -->
+    	   </div>
+    	 </div>
+    	</div> 
+    </div>
+  </div>	 
+</section>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
